@@ -194,7 +194,7 @@ input {
     }
 }
 
-#aboutUs , #storeLocation{
+#aboutUs , #storeLocation, #about, #gallery{
     width: 100%;
     padding: 5% 10%;
 }
@@ -293,4 +293,72 @@ footer p a {
 
 footer i {
     margin-right: 8px;
+}
+
+#about h4 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 64px;
+    color: var(--primaryColor);
+}
+
+.service , .item{
+    width: 23%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+}
+
+.item  {
+    height: auto;
+    background: white;
+}
+
+.item p {
+    margin-top: 5px;
+}
+
+.item img {
+    width: 100%;
+    height: 25vh;
+    display: block;
+}
+
+.item:nth-child(5),.item:nth-child(6),.item:nth-child(7),.item:nth-child(8){
+    margin-top: 24px;
+}
+
+.service:nth-child(5),.service:nth-child(6),.service:nth-child(7),.service:nth-child(8){
+    margin-top: 24px;
+}
+
+#services , .items{
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 700px){
+    .service {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .service:nth-child(5),.service:nth-child(6),.service:nth-child(7),.service:nth-child(8){
+        margin-top: 0px;
+    }
+
+    .item {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .item:nth-child(5),.item:nth-child(6),.item:nth-child(7),.item:nth-child(8){
+        margin-top: 0px;
+    }
+
 }

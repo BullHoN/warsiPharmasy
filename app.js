@@ -13,6 +13,14 @@ app.get('/about',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'pages','aboutUs.html'))
 })
 
+app.get('/services',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'pages','services.html'))
+})
+
+app.get('/gallery',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'pages','gallery.html'))
+})
+
 app.get('/contact',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'pages','contactUs.html'))
 })

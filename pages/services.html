@@ -8,12 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
-    <style>
-        iframe {
-            width: 100%;
-            height: 60vh;
-        }
-    </style>
 </head>
 <body>
     <div id="header">
@@ -28,7 +22,7 @@
 
     <nav>
         <div class="nav-wrapper white">
-            <a href="#!" class="brand-logo"><img src="./images/logo1.jpg"></a>
+            <a href="/" class="brand-logo"><img src="./images/logo1.jpg"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/about">About Us</a></li>
@@ -42,47 +36,69 @@
 
     <ul class="sidenav" id="mobile-demo">
         <li><a href="/about">About Us</a></li>
-        <li><a href="/contact">Contat Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/gallery">Gallery</a></li>
         <li><a href="collapsible.html">Blogs</a></li>
     </ul>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14045.123462605421!2d77.0653901!3d28.350357!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40db53e2630081cb!2sTravel%20Raasta!5e0!3m2!1sen!2sin!4v1600578979830!5m2!1sen!2sin"  frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+    <section id="about">
+        <h5 style="color:var(--primaryColor);font-weight:bold;letter-spacing: 2px;">Services</h5>
+        <hr />
+        <div id="services">
+            <div class="service">
+                <h4><i class="fa fa-history"></i></h4>
+                <p>24 hours serviceable outlets</p>
+            </div>
 
-    <section id="delivery" class="row">
-        <div class="col sm12 m6 call">
-            <div>
-                <h5>For <br /><span>FREE Doorstep Delivery</span><br />of your medicines.</h5>
-                <a href="tel:+91532455040" class="call-button">Call Now</a>
-                <h5>or you can <br /><span>Place Your Order</span><br />by submitting the form.</h5>
+            <div class="service">
+                <h4><i class="fa fa-truck"></i></h4>
+                <p>Fast Home Delivery</p>
             </div>
+
+            <div class="service">
+                <h4><i class="fa fa-file-invoice"></i></h4>
+                <p>State of art bill processing systems</p>
+            </div>
+
+            <div class="service">
+                <h4><i class="fa fa-history"></i></h4>
+                <p>24 hours serviceable outlets</p>
+            </div>
+
+            <div class="service">
+                <h4><i class="fa fa-history"></i></h4>
+                <p>24 hours serviceable outlets</p>
+            </div>
+
+            <div class="service">
+                <h4><i class="fa fa-truck"></i></h4>
+                <p>Fast Home Delivery</p>
+            </div>
+
+            <div class="service">
+                <h4><i class="fa fa-file-invoice"></i></h4>
+                <p>State of art bill processing systems</p>
+            </div>
+
+            <div class="service">
+                <h4><i class="fa fa-history"></i></h4>
+                <p>24 hours serviceable outlets</p>
+            </div>
+
         </div>
- 
-        <div class="col sm12 m6 order">
-            <h5 style="color:var(--primaryColor);font-weight: bold;">Get in Touch</h5>
-            <div id="forms">
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input class="browser-default" type="text" />
-                </div>
-                <div class="input-groups">
-                    <div class="input-group">
-                        <label for="name">Contact Number</label>
-                        <input class="browser-default" type="number" />
-                    </div>
-                    <div class="input-group">
-                        <label for="name">Email Id</label>
-                        <input class="browser-default" type="email" />
-                    </div>
-                </div>
-                <div class="input-group">
-                    <label for="name">Your Message</label>
-                    <textarea class="browser-default" ></textarea>
-                </div>
-                <button class="callback">Submit</button>
-            </div>
-        </div>        
+    </section>
+
+    <section id="contact">
+        <div>
+            <h5>CALL US FOR HOME DELIVERY</h5>
+            <h5>033 6666 6666 / 033 4949 4949</h5>
+        </div>
+
+        <div>
+            <h5>WHATSAPP YOUR PRESCRIPTIPONS</h5>
+            <h5>+91 8334077777</h5>
+        </div>
     </section>
 
     <footer>
@@ -117,6 +133,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const elems = document.querySelectorAll('.sidenav');
             const instances = M.Sidenav.init(elems,{});
+
         });
   </script>
 
