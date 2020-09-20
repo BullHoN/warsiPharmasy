@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warsi Pharmasy</title>
+    <title>Warsi Pharmacy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -35,11 +35,14 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
+        <img src="./images/logo1.jpg">
         <li><a href="/services">Services</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/gallery">Gallery</a></li>
         <li><a href="/contact">Contact Us</a></li>
         <li><a href="collapsible.html">Blogs</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=+918334077777" class="header-link"><i class="fab fa-whatsapp"></i><span>+91 9532455040</span></a></li>
+        <li><a href="tel:+919532455040" class="header-link"><i class="fa fa-phone-alt"></i><span>+91 9532455040</span></a></li>
     </ul>
 
 
@@ -164,6 +167,17 @@
                     fullWidth: true,
                     indicators: true
                 })[0];
+
+                const right = document.querySelector('.fa-arrow-right');
+                const left = document.querySelector('.fa-arrow-left')
+
+                right.addEventListener('click',()=>{
+                    carouselInstance.next();
+                })
+
+                left.addEventListener('click',()=>{
+                    carouselInstance.prev();
+                })
 
                 setInterval(()=>{
                     carouselInstance.next()
