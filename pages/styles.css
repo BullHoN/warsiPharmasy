@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primaryColor: #76b043;
+    --secondaryColor: #5d873b;
+    --background: #e4eee4;
+    --padding: 0px 5% 0px 5%;
+}
+
+#header {
+    width: 100%;
+    height: 8vh;
+    padding: 0px 5% 0px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primaryColor);
+}
+
+.header-link {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#header i {
+    font-size: 18px;
+}
+
+.header-link span {
+    margin-left: 12px;
+    letter-spacing: 1px;
+}
+
+#header > div {
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+}
+
+#header-delivery {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background: var(--secondaryColor);
+    text-transform: uppercase;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    animation: deliveryAnimation 0.8s infinite alternate-reverse;
+}
+
+@keyframes deliveryAnimation{
+    0%{
+        background: var(--secondaryColor);
+    }
+
+    100%{
+        background: var(--primaryColor);
+    }
+}
+
+@media(max-width:700px){
+    #header{
+        display: none;
+    }
+}
+
+nav {
+    height: 10vh;
+}
+
+.nav-wrapper {
+    padding: var(--padding);
+}
+
+.nav-wrapper a{
+    color: var(--primaryColor);
+}
+
+.brand-logo img {
+    width: 200px;
+    height: 10vh;
+}
+
+.carousel { 
+    height: 70vh;
+    position: relative;
+}
+
+.carousel i {
+    position: absolute;
+    z-index: 100000;
+    color: white;
+    font-size: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fa-arrow-right {
+    right: 5%;
+}
+
+.fa-arrow-left {
+    left: 5%;
+}
+
+@media(max-width:700px){
+    .carousel {
+        height: 30vh;
+    }
+
+    .carousel i{
+        font-size: 24px;
+    }
+
+}
+
+#delivery .call {
+    padding: 5% 10%;
+    color: white;
+    background: var(--primaryColor);
+}
+
+#delivery span {
+    color: black;
+    font-weight: bold;
+}
+
+#delivery h5 {
+    font-size: 32px;
+    margin-bottom: 48px;
+}
+
+.call-button {
+    border-radius: 24px;
+    padding: 10px 150px;
+    background: black;
+    color: var(--primaryColor);
+}
+
+#delivery .order {
+    padding: 5% 5%;
+    background: var(--background);
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 24px;
+    flex-direction: column;
+}
+
+.input-groups {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-groups .input-group {
+    width: 45%;
+}
+
+label {
+    text-transform: uppercase;
+    color: black;
+}
+
+input {
+    padding: 5px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.callback {
+    padding: 10px 15px;
+    background: var(--primaryColor);
+    border: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media(max-width:700px){
+    .call-button {
+        padding: 10px 100px;
+    }
+
+    .input-groups .input-group {
+        width: 100%;
+    }
+}
+
+#aboutUs , #storeLocation{
+    width: 100%;
+    padding: 5% 10%;
+}
+
+#aboutUs p , #storeLocation p{
+    font-size: 18px;
+    line-height: 28px;
+}
+
+#storeLocation > div #loca-data{
+    width: 50%;
+}
+
+#storeLocation > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width:700px){
+    #storeLocation > div {
+        flex-direction: column;
+    }
+
+    #storeLocation iframe {
+        width: 300px;
+    }
+
+    #storeLocation > div #loca-data{
+        margin-top: 24px;
+        width: 100%;
+    }
+
+}
+
+
+#contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact div {
+    width: 50%;
+    padding: 2% 0px;
+    display: flex;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact div h5 {
+    font-weight: bold;
+}
+
+#contact div:nth-child(1){
+    background: var(--secondaryColor);
+}
+
+#contact div:nth-child(2){
+    background: var(--primaryColor);
+}
+
+@media(max-width: 700px){
+    #contact div{
+        width: 100%;
+    }
+}
+
+footer {
+    background: black;
+    padding: 2% 5%;
+    color: #eee;
+}
+
+footer p {
+    margin-top: 12px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--primaryColor);
+}
+
+footer p a {
+    margin: 0px 5px;
+    color: white;
+    font-size: 18px;
+}
+
+footer i {
+    margin-right: 8px;
+}

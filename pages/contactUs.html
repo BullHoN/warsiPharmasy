@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warsi Pharmasy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        iframe {
+            width: 100%;
+            height: 60vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <a href="mailto:vaibhavbhardwaaj@gmail.com" class="header-link"><i class="fa fa-envelope"></i><span>info@travelraasa.com</span></a>
+
+        <div>
+            <a id="header-delivery" href="#delivery">Home Delivery Available</a>
+            <a href="https://api.whatsapp.com/send?phone=+918334077777" class="header-link"><i class="fab fa-whatsapp"></i><span>+91 9532455040</span></a>
+            <a href="tel:+919532455040" class="header-link"><i class="fa fa-phone-alt"></i><span>+91 9532455040</span></a>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#!" class="brand-logo"><img src="./images/logo1.jpg"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="mobile.html">Blogs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contat Us</a></li>
+        <li><a href="collapsible.html">Blogs</a></li>
+    </ul>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14045.123462605421!2d77.0653901!3d28.350357!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40db53e2630081cb!2sTravel%20Raasta!5e0!3m2!1sen!2sin!4v1600578979830!5m2!1sen!2sin"  frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+
+    <section id="delivery" class="row">
+        <div class="col sm12 m6 call">
+            <div>
+                <h5>For <br /><span>FREE Doorstep Delivery</span><br />of your medicines.</h5>
+                <a href="tel:+91532455040" class="call-button">Call Now</a>
+                <h5>or you can <br /><span>Place Your Order</span><br />by submitting the form.</h5>
+            </div>
+        </div>
+ 
+        <div class="col sm12 m6 order">
+            <h5 style="color:var(--primaryColor);font-weight: bold;">Get in Touch</h5>
+            <div id="forms">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input class="browser-default" type="text" />
+                </div>
+                <div class="input-groups">
+                    <div class="input-group">
+                        <label for="name">Contact Number</label>
+                        <input class="browser-default" type="number" />
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Email Id</label>
+                        <input class="browser-default" type="email" />
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="name">Your Message</label>
+                    <textarea class="browser-default" ></textarea>
+                </div>
+                <button class="callback">Submit</button>
+            </div>
+        </div>        
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="col s12 m4">
+                <a href="/" class="brand-logo"><img src="./images/logo1.jpg"></a>
+                <p>Since the inception of Frank Ross in 1906 in Kolkata, it has been synonymously offering us with quality pharma and healthcare products and services. Highly skilled pharmacists are adroit at operating the pharmacies inside the reputed hospitals and other corporate establishments. Frank Ross aims to be the leading pharmacy chain in India by touching the lives of the common people of India.</p>
+                <p>Follow us: <a href="facebook.com"><i class="fab fa-facebook-square"></i></a> <a href="instagram.com"><i class="fab fa-instagram-square"></i></a></p>
+            </div>
+
+            <div class="col s12 m3">
+                <h5>Contact Information</h5>
+                <p><i class="fa fa-home"></i>Registered Office:<br/>7, Jawaharlal Nehru Road, Kolkata-700013, West Bengal, India</p>
+                <p><i class="fa fa-phone-alt"></i>Call us: (+91) 033 2228 6042 / 0066 / 0067</p>
+                <p><i class="fab fa-whatsapp"></i>Whatsapp: (+91) 8334077777</p>
+                <p><i class="fa fa-envelope"></i>info@travelraasta.com</p>
+            </div>
+
+            <div class="col s12 m3">
+                <h5>Important Links</h5>
+                <a href="/">Blogs</a><br/>
+                <a href="/about">About Us</a><br />
+                <a href="/contact">Contact Us</a><br />
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elems = document.querySelectorAll('.sidenav');
+            const instances = M.Sidenav.init(elems,{});
+        });
+  </script>
+
+</body>
+</html>
