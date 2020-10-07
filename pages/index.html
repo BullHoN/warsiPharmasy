@@ -117,15 +117,59 @@
         </div>
     </section>
 
+    <section id="testimonials">
+        <h1>Testimonials From our clients</h1>
+        <div id="test-wrapper">
+            <div class="testimonials">
+                <img src="images/test1.png" alt="">
+                <img src="images/test3.png" alt="">
+                <img src="images/test4.png" alt="">
+                <img src="images/test4.png" alt="">
+                <img src="images/test1.png" alt="">
+                <img src="images/test3.png" alt="">
+            </div>
+        </div>
+        <div id="test-buttons">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+
+    <section id="blogs">
+        <div id="routes">
+            <h1>Latest From Our Blogs</h1>
+            <a href="#">View all</a>
+        </div>
+        <div class="blogs">
+            <div class="blog">
+                <img src="images/blogs.jpg" >
+                <p>13 Oct 2019</p>
+                <h2>Best Moment With Family</h2>
+            </div>
+            <div class="blog">
+                <img src="images/blog2.jpg" >
+                <p>1 Dec 2019</p>
+                <h2>Best Moment With Friends</h2>
+            </div>
+            <div class="blog">
+                <img src="images/blog3.jpg" >
+                <p>2 Jan 2020</p>
+                <h2>Best Trip Ever!!</h2>
+            </div>
+        </div>
+        <a href="#"  class="secondary">view more</a>
+    </section>
+
     <section id="contact">
         <div>
             <h5>CALL US FOR HOME DELIVERY</h5>
-            <h5>+91 9984630003</h5>
+            <h5><a href="tel:+919984630003"><i class="fa fa-phone-alt"></i>(+91) 9984630003</a></h5>
         </div>
 
         <div>
             <h5>WHATSAPP YOUR PRESCRIPTIPONS</h5>
-            <h5>+91 9984630007</h5>
+            <h5><a href="https://api.whatsapp.com/send?phone=+919984630007"><i class="fab fa-whatsapp"></i>(+91) 9984630007</a></h5>
         </div>
     </section>
 
@@ -183,7 +227,79 @@
                     carouselInstance.next()
                 },4000)
 
-            });
+                const boxes = document.querySelectorAll('.box');
+                const testimonials = document.querySelector('.testimonials'); 
+                
+                let activeIndex = 0,disableAuto = false;
+                boxes[0].style.background = "var(--primaryColor)";
+                
+                function decideAuto(){
+                    disableAuto = true;
+                    setTimeout(()=>{
+                        disableAuto = false;
+                    },15000)
+                }
+                
+                function slideTheTestimonials(index){
+                    if(index > activeIndex){
+                        testimonials.style.transform = `translateX(-${(index)*100}%)`;
+                    }else {
+                        if(index == 0){
+                            testimonials.style.transform = `translateX(${0}%)`;     
+                        }else {
+                            testimonials.style.transform = `translateX(-${100}%)`;  
+                        }
+                    }
+                }
+                
+                function removeAccept(index){
+                    boxes.forEach((box,i)=>{
+                        if(i != index){
+                            box.style.background = "white";
+                        }
+                    })
+                }
+
+
+                boxes.forEach((box,index)=>{
+                    box.addEventListener('click',()=>{
+                        if(activeIndex != index){
+                            decideAuto();
+                            removeAccept(index);
+                            box.style.background = "var(--primaryColor)";
+                            slideTheTestimonials(index);
+                            activeIndex = index;
+                        }
+                    })
+                })
+
+                let i = 0;
+                let add = true;
+                
+                setInterval(()=>{
+                
+                    if(!disableAuto){
+                        removeAccept(i);
+                        boxes[i].style.background = "var(--primaryColor)";
+                        slideTheTestimonials(i);
+                        activeIndex = i;
+                
+                        if(i == 2){
+                            add = false;
+                        }else if(i == 0){
+                            add = true;
+                        }
+                
+                        if(add){
+                            i++;
+                        }else {
+                            i--;
+                        }
+                    }
+                
+                },3000)               
+              
+        });
       </script>
 
 </body>
