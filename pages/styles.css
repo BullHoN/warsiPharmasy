@@ -543,6 +543,10 @@ footer i{
     object-fit: cover;
 }
 
+.blog a {
+    color: black;
+}
+
 .blog h2 {
     margin: 0px !important;
     font-size: 22px;
