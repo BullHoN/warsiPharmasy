@@ -544,6 +544,9 @@ footer i{
 }
 
 .blog a {
+    padding:  0px !important;
+    margin: 0px !important;
+    width: 100%;
     color: black;
 }
 
