@@ -64,27 +64,27 @@
         </div>
  
         <div class="col sm12 m6 order">
-            <h5 style="color:var(--primaryColor);font-weight: bold;">Get in Touch</h5>
+            <h5 style="color:var(--primaryColor);font-weight: bold;">Place Your Order</h5>
             <div id="forms">
                 <div class="input-group">
                     <label for="name">Name</label>
-                    <input class="browser-default" type="text" />
+                    <input id="name-text" class="browser-default" type="text" />
                 </div>
                 <div class="input-groups">
                     <div class="input-group">
                         <label for="name">Contact Number</label>
-                        <input class="browser-default" type="number" />
+                        <input id="name-number" class="browser-default" type="number" />
                     </div>
                     <div class="input-group">
                         <label for="name">Email Id</label>
-                        <input class="browser-default" type="email" />
+                        <input id="name-email" class="browser-default" type="email" />
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="name">Your Message</label>
-                    <textarea class="browser-default" ></textarea>
+                    <label for="name">Your Query</label>
+                    <textarea id="name-query" class="browser-default" ></textarea>
                 </div>
-                <button class="callback">Submit</button>
+                <button class="callback">Request a callback</button>
             </div>
         </div>        
     </section>
@@ -121,6 +121,24 @@
         document.addEventListener('DOMContentLoaded', function() {
             const elems = document.querySelectorAll('.sidenav');
             const instances = M.Sidenav.init(elems,{});
+
+            const callbackButton = document.querySelector('.callback');
+                const nameText = document.getElementById('name-text');
+                const nameNumber = document.getElementById('name-number');
+                const nameEmail = document.getElementById('name-email')
+                const nameQuery = document.getElementById('name-query');
+
+
+                callbackButton.addEventListener('click',()=>{
+                    let name = nameText.value;
+                    let email = nameEmail.value;
+                    let number = nameNumber.value;
+                    let query = nameQuery.value;
+
+                    let text = `Hi I am ${name}, my Number is ${number}, and email is ${email}, i want to talk about ${query}`
+                    window.open(`https://api.whatsapp.com/send?phone=+919818040401&text=${text}`,"_blank")
+                })
+
         });
   </script>
 

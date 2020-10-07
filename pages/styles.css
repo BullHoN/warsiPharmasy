@@ -202,6 +202,7 @@ input {
 }
 
 .callback {
+    cursor: pointer;
     padding: 10px 15px;
     background: var(--primaryColor);
     border: none;
@@ -576,4 +577,20 @@ footer i{
         margin-bottom: 24px;
     }
 
+}
+
+
+#whatsapp {
+    position: fixed;
+    bottom: 5vh;
+    right: 5%;
+    z-index: 9999999;
+    background: wheat;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#whatsapp img {
+    width: 25px;
+    height: 25px;
 }
