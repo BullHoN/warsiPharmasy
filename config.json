@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "warsipharmacy-af3fd",
+  "private_key_id": "dd45700e43834e83b54fdca374997801e9101153",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDO9QW6DfiMFBOv\nSVJJc8znR4iwEf9s+FLjjDEA/ZuipSsH6057rNuEqB5kOKARv2WX89nWKh0+ztsl\ndflvImVZvkC76p1H23rjMj7z4/5r23UIG+uyTOwtgXeGB2rsrrHMsijTCKm81GGw\nxhSMzSCKvbm+CDeJKPmh8WmHmXwAi1/ISh/bUEUBTQJM0VmdLea9PoYbmhBiHsP9\nMyrIMj4fo55VI6pThpNUXZJgSsQg4FBJ20HJMqdDeaKc5Lpqe5K03LVcFUIou1gM\nvdfG4+HX7VZYsOxEsTCzdZvdajv1lfFOT1lO1FeQCB36DVF8BS+u7LwNhrhO7hbp\nmxwtimHpAgMBAAECggEAFq/Y/h2YdMChrMo4nUk2udbHZue+LKOnMH8WgyGJ/WEm\nT7KtkpSvJsJoPHvRnkhxOmBWranFtXQnJVriqlpmqlkXDxKHxdALT1sbeBBy/D9d\nO7OV2aChllZ2NAjdoY7/+izAmWu+ca8Fe4OnTo0RB2yHb0vGzMAjZ2uHsj/yzjtG\nnK2705fuUhZ9vT8bFOTS+wGNH7lR2bfE3GbAQIR5XgYI12AokzWpxqiPE5e6/+fl\nUhwoQ6z0UJz2hc8+sFG7MHh9VfcdHeXnNd9XUrO8QxDC43naKcTlm+wwPLe8sVkB\nU0z3Zlrej2wfx5e3QSsyI66bfLBVwZk8RHgNHgE85QKBgQDrwHVF4feuXlWEp45E\niZFzzx1Yie2N0Gc2GGE0rm/o+76eZZktL2COLbP9dSafOygy8CzslLW6XrONDSuv\n+M5DK9I3aVHHiQSBRqUG9DIsmos0/gzslix9Jph8iMIzEGcA7NuUf0107+qLbFDC\nyRdoSmc7UD1OfQa6zo0oIU7e7QKBgQDgu3KXhg//Q8mXlAnsZF5xNUDA6aVmBDrc\nZbPavgoRIj220+8VfzghoOi3RdFItotObSWFwLKyWGva+GC23QaZWhHUmgdwJa/D\nCC1sOB0rxddLfbsljAFTMdzt+0whVjk9ZD96d7vyUg3DBnsYX4M2/gNPUq/Dfnfb\nwWOmGPVzbQKBgGiGVziZvJgJ6T68j35hxCSloqw70yB6UxiP7KFP6fxRia1u/GAl\nTlkbeF8bDvmwX91d0X0/Xed4z4DtYv5NgR4VEspQntqqLF4o9UhFAu31w1zGevJ2\njtkaQKeOdxPu5MxrN9v6KVx8dvBEIPaL9B3gRy7sH5JqKo6uv7UYN4DtAoGAET+R\nzftmIutq/41HLbOOZBX4QFYucaQFeID9yt4nG6WLIwslIHtBLaOR+O8M3w3Tp1NN\nO/TMQk/zBz1k/uP76600DSM9Sug5kzh/c/zikEeA/LRLttgGCgKbuFA/SZe6kPGu\nxZGHBVQy5jMLI5XBFmlsi5wHDXQZcu5m3Yqw3AkCgYB431OEyagBoWT4Ts0Oj7CW\nLaPJSwgUkpI+fanUKF9DNAYCz5vJVOEewQ5EgSRQCXAXNR0VD+XODTcM/aTWVV/d\nag+tPdduM+R/26tvWY+prxuj4xd7hkIpfodb8Ya+/PfLtICZbvqotH8XUAaEF0h8\nFB2y7j9rTWm3YHO1kM7TQw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-9yk9j@warsipharmacy-af3fd.iam.gserviceaccount.com",
+  "client_id": "105634302337251239579",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-9yk9j%40warsipharmacy-af3fd.iam.gserviceaccount.com"
+}
