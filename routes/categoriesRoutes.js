@@ -9,7 +9,8 @@ function wasteTime(){
 }
 
 // TODO: Get All The Categories
-const categories = ['tablets','syrups','healthcare'];
+const categories = ['TabletsAndCapsules','Syrup','Injection','babycare','chyawanprash','oil','condom','otcproduct','proteinpowder'
+,'whoors','vetnary','SportsSurgical','OintmentAndGel','powdersachet','Toothpaste','FaceWash','RotacapInhalers','DiapersAndSanitarypads','soap','shampoo','eyedrop'];
 router.get('/',(req,res)=>{
     res.json(categories);
 })
@@ -18,7 +19,7 @@ router.get('/',(req,res)=>{
 // /category/tables/page=2&items=5
 router.get('/category/:categoryName',async (req,res)=>{
 
-    wasteTime();
+    // wasteTime();
 
     const categoryName = req.params.categoryName;
 
@@ -27,6 +28,8 @@ router.get('/category/:categoryName',async (req,res)=>{
     const skip = (page-1)*limit;
 
     
+    // console.log(categoryName);
+
     try{
         const categoryItems = 
             await CategoryItem.find({categoryName:categoryName})
@@ -42,7 +45,7 @@ router.get('/category/:categoryName',async (req,res)=>{
 // TODO: Search for a Product (may have category)
 router.get('/all',async (req,res)=>{
 
-    wasteTime();
+    // wasteTime();
 
     const category = req.query.category;
     const page = Number.parseInt(req.query.page);
@@ -127,7 +130,7 @@ router.get('/all',async (req,res)=>{
 
 // TODO: Get the top selling items
 router.get('/topSelling',async (req,res)=>{
-    wasteTime();
+    // wasteTime();
     try{
         const topSellingItems = 
             await CategoryItem.find({isAvailable:true})

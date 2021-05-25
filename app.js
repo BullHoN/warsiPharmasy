@@ -33,15 +33,35 @@ app.use('/prescription',require('./routes/prescriptionRoutes'));
 
 
 // Insert Dummy Data
-// const User = require('./models/User');
+// const CategoryItem = require('./models/CategoryItem');
+// for(let i=0;i<20;i++){
+//     const categoryItem = new CategoryItem({
+//         itemName: `Benadryl cough syrup ${i}`,
+//         categoryName: "syrups",
+//         discount: Math.floor(Math.random() * 99),
+//         priceItems: [
+//             {
+//                 priceTag: "200ml",
+//                 price: 200
+//             },
+//             {
+//                 priceTag: "250ml",
+//                 price: 750
+//             },
+//             {
+//                 priceTag: "500ml",
+//                 price: 860
+//             },
+//         ]
+//     }).save();
+// }
 
-// const user = new User({
-//     phoneNo: "+919997403324",
-//     otp: "1234",
-//     isVerified: true
-// }).save().then(()=>{
-//     console.log('saved');
-// })
+// load data script
+const path  = require('path');
+const csvPath = path.resolve(__dirname,'data','final_data.csv');
+const importDataFromCSV = require('./utils/loadData')
+
+// importDataFromCSV(csvPath);
 
 
 // Main Page Routes

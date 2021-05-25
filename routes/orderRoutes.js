@@ -28,7 +28,7 @@ router.post('/deliveryPrice',(req,res)=>{
 router.get('/upiDetails',(req,res)=>{
     res.json({
         upiName: "Prakhar Bhatt",
-        upiId: "7081256474@ybl"
+        upiId: "prakharbhatt2810@ybl"
     })
 })
 
@@ -201,7 +201,7 @@ router.get('/changeStatus/:orderId',async (req,res)=>{
 
 })
 
-// sendNotificationToUser("hello","hi","fGVeGkcbRGaBAFIltnz6RD:APA91bGBLWekj77e9Dpuje-PJJcCXFQhPImmgxyOYm5scoTR9zv7bJdikVtfe-pAYD17Db5lffxNDfE_8JDrcOu8lpwXOGLQixsmtnv8akA51LzQAfsZvQDvaPQbkh13YeyXJyZYA55X")
+// sendNotificationToUser("hello","hi","c07QjAQgRaa_W7OkymmUIk:APA91bGe3ppLtndMpYECj8G7bgUVTYIdElORcGBB0N7cjYB4CGbTel8Y2AARLYvE2GtPXGi9fsoV5cjdtM0Xdn6UGCJOg5eoaqFzRv-3ygHpLpMBcGTpSx_Xoc27rT0zvj4OJ7zFiS6x")
 
 function sendNotificationToUser(title,body,fcmID) {
 	const message = {
@@ -209,7 +209,10 @@ function sendNotificationToUser(title,body,fcmID) {
 			title:title,
 			body:body			
 		},
-		token: fcmID
+		token: fcmID,
+        android:{
+            priority: "high"
+        }
 	}
 
 	admin.messaging().send(message)
@@ -228,7 +231,10 @@ function sendNotificationToAdmin() {
 			title:"New Order arrived",
 			body:"Hurry up look at new Order"			
 		},
-		topic:"admin"
+		topic:"admin",
+        android:{
+            priority: "high"
+        }
 	}
 
 	admin.messaging().send(message)
