@@ -9,8 +9,8 @@ function wasteTime(){
 }
 
 // TODO: Get All The Categories
-const categories = ['TabletsAndCapsules','Syrup','Injection','babycare','chyawanprash','oil','condom','otcproduct','proteinpowder'
-,'whoors','vetnary','SportsSurgical','OintmentAndGel','powdersachet','Toothpaste','FaceWash','RotacapInhalers','DiapersAndSanitarypads','soap','shampoo','eyedrop'];
+const categories = ['tablets','syrup','injection','babycare','chyawanprash','oil','condom','otcproduct','proteinpowder'
+,'whoors','vetnary','sportssurgical','ointmentandgel','powdersachet','toothpaste','facewash','rotacapinhalers','diapersandsanitarypads','soap','shampoo','eyedrop'];
 router.get('/',(req,res)=>{
     res.json(categories);
 })
@@ -60,7 +60,7 @@ router.get('/all',async (req,res)=>{
         if(category){
             try{
                 const items = 
-                    await CategoryItem.find({categoryName: category,itemName: { $regex: query} })
+                    await CategoryItem.find({categoryName: {$regex: category},itemName: { $regex: query} })
                         .limit(limit)
                         .skip(skip)
                     

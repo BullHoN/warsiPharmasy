@@ -9,6 +9,10 @@ const OrderSchema = mongoose.Schema({
         type: Number,
         required: true
     },
+    assignedTo: {
+        type: String,
+        default: "No One is Assigned"
+    },
     orderItems:[
         {
             itemId: String,

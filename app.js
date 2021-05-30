@@ -30,6 +30,7 @@ app.use('/categories',require('./routes/categoriesRoutes'));
 app.use('/order',require('./routes/orderRoutes'));
 app.use('/auth',require('./routes/authRoutes'));
 app.use('/prescription',require('./routes/prescriptionRoutes'));
+app.use('/delivery',require('./routes/deliveryBoyRoutes'));
 
 
 // Insert Dummy Data
@@ -55,6 +56,14 @@ app.use('/prescription',require('./routes/prescriptionRoutes'));
 //         ]
 //     }).save();
 // }
+
+// add delivery Boys
+// const DeliveryBoy = require('./models/DeliveryBoy');
+// const deliveryBoy = new DeliveryBoy({
+//     name: "Prakhar",
+//     fcmId: "asfaf asd as fsaf ",
+//     phoneNo: "is doiisd fjiojs fjiosdfjis dfijfjfj"
+// }).save();
 
 // load data script
 const path  = require('path');

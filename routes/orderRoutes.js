@@ -4,6 +4,7 @@ const OrderItem = require('../models/OrderItem');
 const User = require('../models/User');
 const CategoryItem = require('../models/CategoryItem')
 const admin = require("firebase-admin");
+const DeliveryBoy = require('../models/DeliveryBoy')
 
 function wasteTime(){
     for(let i=0;i<1000000000;i++){
@@ -44,7 +45,7 @@ router.post('/newOrder',async (req,res)=>{
     })
 
     // TODO: SEND NOTIFICATION TO ADMIN
-    sendNotificationToAdmin();
+    sendNotificationToAdmin("New Order Arrived","Hurry Up Look at the new order!!");
 
     try{
         const savedRes = await orderItem.save();
@@ -155,9 +156,11 @@ router.get('/all',async (req,res)=>{
                     orderItems: cartItems,
                     status: orderItem.status,
                     deliveryPrice: orderItem.deliveryPrice,
-                    customerID: orderItem.customerID
+                    customerID: orderItem.customerID,
+                    assignedTo: orderItem.assignedTo
                 }
 
+                // console.log(temp);
                 results.push(temp);
             }
 
@@ -175,6 +178,7 @@ router.get('/all',async (req,res)=>{
 router.get('/changeStatus/:orderId',async (req,res)=>{
     const orderId = req.params.orderId;
     const status = Number.parseInt(req.query.status);
+    const name = req.query.name;
 
     // TODO: send the notificaiton to user
 
@@ -183,12 +187,30 @@ router.get('/changeStatus/:orderId',async (req,res)=>{
         const user = await User.findOne({_id: orderItem.customerID});
         if(orderItem){
             orderItem.status = status;
+            orderItem.assignedTo = name;
             await orderItem.save();
 
             if(status == 1){
                 sendNotificationToUser("Your Order is Out For Delivery","Your laf ilafns lnfaslknklasn lnalfs n",user.fcmID);
+
+                DeliveryBoy.findOne({name: name}).then((deliveryBoy)=>{
+
+                    deliveryBoy.currentItems = [...deliveryBoy.currentItems,orderId];
+                    deliveryBoy.save().then(()=>{
+                        sendNotificationToUser("New Order","New Order Arrived For Delivery",deliveryBoy.fcmId);
+                    })
+    
+                })
+
             }else if(status == 2){
                 sendNotificationToUser("Your Order is Delivered","Your laf ilafns lnfaslknklasn lnalfs n",user.fcmID);
+                sendNotificationToAdmin("Order Delivered!!","Order is Delivered By " + name);
+
+                DeliveryBoy.findOne({name: name}).then((deliveryBoy)=>{
+                    deliveryBoy.currentItems = deliveryBoy.currentItems.filter(curr => curr != orderId);
+                    deliveryBoy.save();
+    
+                })
             }
 
             res.json(true);
@@ -225,11 +247,11 @@ function sendNotificationToUser(title,body,fcmID) {
 
 }
 
-function sendNotificationToAdmin() {
+function sendNotificationToAdmin(title,body) {
 	const message = {
 		data:{
-			title:"New Order arrived",
-			body:"Hurry up look at new Order"			
+			title:title,
+			body: body		
 		},
 		topic:"admin",
         android:{
