@@ -19,7 +19,9 @@ function importDataFromCSV(filePath){
                     price: parseInt(prices[i])
                 })
             }
-    
+            
+            // console.log(item.ItemName);
+
             const categoryItem = new CategoryItem({
                 itemName: item.ItemName,
                 categoryName: item.Category,

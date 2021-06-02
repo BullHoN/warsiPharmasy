@@ -1,20 +1,66 @@
-ItemName,Category,Tags,PriceTags
-AMLA HAIR OIL ,oil,"20ml,90ml,180ml,450ml","18.15,40.41,80.83,182.78"
-ARNICA OIL ,oil,"100ml,200ml,500ml","47.35,84.59,144.01"
-AUSTRO PAIN OIL ,oil,60ml,60
-BIO OIL ,oil,"25ml,60ml","173.90,360.02"
-CLOVE OIL,oil,2ml,20.92
-DIVYA PEEDANTAK TAIL,oil,100ml,49.99
-DR. ORTHO,oil,"60ml,100ml,120ml","120.24,238.32,240.50"
-DYNAPAR QPS PLUS SOLU ,oil,30ml,198.35
-DYNAPAR QPS SPRAY ,oil,30ml,181.7
-EMAMI 7OIL ,oil,"50ml,100ml","36.36,56.73"
-FIGARO,oil,"100ml,200ml,1ltr,2ltr","138.00,222.02,790.61,1290.11"
-KESHKANTI AMLA OIL ,oil,200ml,71.11
-MARCOGESIC OIL,oil,"30ml,60ml","56.32,103.40"
-MYOSTAAL  OIL,oil,"30ml,60ml","74.01,122.01"
-PR OIL   ,oil,50ml,92.15
-SIMYL MCT OIL  ,oil,100ml,161.3
-AD VITAMIN BABY OIL     ,oil,100ml,40
-KESHKANTI  OIL ,oil,120ml,115.55
-CHYAWANPRASH BD ,chyawanprash,"500g,1kg","138.96,250.88"
+itemName,ItemName,Category,Tags,PriceTags
+ACCUTAZ HS,accutaz hs,injection,5ML,86.485
+ACCUTAZ-PS,accutaz-ps,injection,5ML,36.476
+ABHAYARAB-PF INJ,abhayarab-pf inj,injection,1,295.0033
+ACILOC AMP INJ,aciloc amp inj,injection,1*5,2.7845
+ACTRAPID FLEXPEN,actrapid flexpen,injection,3ML,380.46
+ACTRAPID HM PENFIL,actrapid hm penfil,injection,3ML,236.29
+ALAMIN SN INJECTIOMN,alamin sn injectiomn,injection,200ML,372.48
+AMBISTRYN 1.00 GM,ambistryn 1.00 gm,injection,VIAL,8.2256
+AMBISTRYN-S 0.75 GM,ambistryn-s 0.75 gm,injection,INJ,6.6328
+ANAFORTAN INJ 2ML,anafortan inj 2ml,injection,2ML,17.427
+ANAFORTAN VAIL,anafortan vail,injection,30ML,51.355
+APIDRA 100IU/ML,apidra 100iu/ml,injection,1,466.31
+APIDRA CARTRIDGE,apidra cartridge,injection,5ML,512.9
+APIDRA SOLOSTAR INJ,apidra solostar inj,injection,1,652.12
+ASTYMIN-3 injection,astymin-3 injection,injection,20ML,82.9533
+AUGPEN I.V 150,augpen i.v 150,injection,150 MG,31.65
+AUGPEN IV 300MG,augpen iv 300mg,injection,1PC,54.86
+AUMENTO,aumento,injection,1ML,194.015
+AVIL injection,avil injection,injection,1*2ML,4.12
+AVIL  VIAL,avil  vial,injection,10ML,9.668
+AZEE 500 injection,azee 500 injection,injection,1PC,161.83
+BASALOG REFIL,basalog refil,injection,3ML,447.99
+COEHCG HP 5K injection,coehcg hp 5k injection,injection,1PC,252.15
+CONTRAMAL 100INJ,contramal 100inj,injection,1*5,16.74
+DECADURABOLIN 25MG,decadurabolin 25mg,injection,1*AMP,171.91
+DECADURABOLIN 50MG,decadurabolin 50mg,injection,1*AMP,259.908
+DECADURALIN-100 MG INJ,decaduralin-100 mg inj,injection,1*1,415.95
+DERIPHYLLIN INJ 2ML,deriphyllin inj 2ml,injection,2ML,5.2255
+DOLONEX INJ,dolonex inj,injection,2ML,33.996
+DROTIKIND injection,drotikind injection,injection,2ML,16.8525
+DYTOR AMP,dytor amp,injection,2ML,12.676
+EGLUCENT MIX 25,eglucent mix 25,injection,1,625.8
+EGLUCENT RAPID,eglucent rapid,injection,3ML,625.8
+EIDO injection,eido injection,injection,2ML,29.954
+EMESET 2ML injection,emeset 2ml injection,injection,2ML,7.871
+GRAMOCEF-S injection,gramocef-s injection,injection,1PC,83.9727
+HUMALOG MIX 25 CARTRIDGE,humalog mix 25 cartridge,injection,100IU/M,625.8
+HUMALOG MIX 50,humalog mix 50,injection,3ML,625.8
+HUMAN ACTRAPID 40 INJ,human actrapid 40 inj,injection,1*10ML,124.72
+HUMAN MIXTARD 100 IU/ML,human mixtard 100 iu/ml,injection,1,334.07
+HUMAN MIXTARD 40 I.U./ML,human mixtard 40 i.u./ml,injection,1*10ML,127.07
+HUMAN MIXTARD 50,human mixtard 50,injection,10ML,124.12
+HUMAN PEN ERGO 11,human pen ergo 11,injection,1,0
+HUMAPEN ERGO,humapen ergo,injection,1PC,660.1
+HUMINSULIN 30/70 CARTRIDGES,huminsulin 30/70 cartridges,injection,3 ML,288.44
+HUMINSULIN 30/70 INJ,huminsulin 30/70 inj,injection,10ML,127.92
+HUMINSULIN N 40IU/ML,huminsulin n 40iu/ml,injection,1*10ML,127.9267
+HUMINSULIN R 40IU/ML,huminsulin r 40iu/ml,injection,1*10ML,127.92
+HUMISULIN-30/70 VIAL,humisulin-30/70 vial,injection,1*1VIAL,125.64
+IMAX-S injection,imax-s injection,injection,5ML,80.01
+INSUGEN 30/70,insugen 30/70,injection,40IU/ML,124.19
+INSUGEN 30/70 REFIL 100IU,insugen 30/70 refil 100iu,injection,3ML,190.008
+INSUGEN N/A,insugen n/a,injection,3ML,172.891
+INSUGEN-N REFIL,insugen-n refil,injection,10ML,172.898
+INSUGEN-R,insugen-r,injection,40ML,119.105
+LACARNIT injection,lacarnit injection,injection,5ML,105.98
+LAMINO NEPHRO 7%,lamino nephro 7%,injection,250ML,530.2881
+LANTUS CARTRIDGE,lantus cartridge,injection,1*100,588.7233
+LANTUS SOLOSTAR,lantus solostar,injection,3ML,895.55
+LUPISULIN M 30 INJ,lupisulin m 30 inj,injection,1*10ML,200.564
+MECONERV FORTE INJ,meconerv forte inj,injection,1,73.66
+MEGA CV 1.2GM injection,mega cv 1.2gm injection,injection,1.2GM,72.24
+MEGA CV 600 INJ,mega cv 600 inj,injection,1*600MG,75.02
+MEGA CV INJ 300 MG,mega cv inj 300 mg,injection,1*300MG,52.5767
+MEGANEURON 500MCG INJ,meganeuron 500mcg inj,injection,1AMP,22.121

@@ -67,7 +67,7 @@ app.use('/delivery',require('./routes/deliveryBoyRoutes'));
 
 // load data script
 const path  = require('path');
-const csvPath = path.resolve(__dirname,'data','final_data.csv');
+const csvPath = path.resolve(__dirname,'data','temp.csv');
 const importDataFromCSV = require('./utils/loadData')
 
 // importDataFromCSV(csvPath);

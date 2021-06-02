@@ -12,24 +12,30 @@ function wasteTime(){
     }
 }
 
-let deliveryPrice = 30;
+let deliveryPrice = 120;
+let minOrder = 150;
 
 // Get Delivery Price
 router.get('/deliveryPrice',(req,res)=>{
-    res.json(deliveryPrice);
+    let result = deliveryPrice + "," + minOrder;
+    res.json(result);
 })
 
 // Set Delivery Price
-router.post('/deliveryPrice',(req,res)=>{
-    deliveryPrice = req.body.deliveryPrice;
+router.post('/changePriceAndMinOrder',(req,res)=>{
+    deliveryPrice = Number.parseInt(req.query.deliveryPrice);
+    minOrder = Number.parseInt(req.query.minOrder);
+
+    // console.log(deliveryPrice,minOrder);
+
     res.json(true);
 })
 
 // Get Upi Details
 router.get('/upiDetails',(req,res)=>{
     res.json({
-        upiName: "Prakhar Bhatt",
-        upiId: "prakharbhatt2810@ybl"
+        upiName: "Up 63 Cafe",
+        upiId: "9653090858@okbizaxis"
     })
 })
 
